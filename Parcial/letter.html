@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="java/java.js"></script>
+  <script src="https://kit.fontawesome.com/b375149b8e.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Datos de usuarios</title>
+</head>
+
+<body onload="listar();">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b7eedd">
+    <div class="container-fluid">      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa fa-home"
+                aria-hidden="true"></i> Inicio</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <br />
+    <div class="mb-3">
+      <label for="name" class="form-label"><i class="fa fa-user-o" aria-hidden="true"></i>Nombre Completo</label>
+      <input type="text" class="form-control" id="name" placeholder="Nombre y apellido" required>
+    </div>
+    <div class="mb-3">
+      <label for="emails" class="form-label"><i class="fa fa-envelope-o" aria-hidden="true"></i>Correo
+        Electrónico</label>
+      <input type="email" class="form-control" id="emails" placeholder="name@example.com" required>
+    </div>
+    <button class="btn btn-primary mb-3" onclick="guadar_localStorage();listar();"><i class="fa fa-paper-plane"
+        aria-hidden="true"></i>Suscríbete</button>
+
+    <br />
+    <br />
+    <div class="alert alert-primary" role="alert">
+      Listado de subscriptores
+    </div>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><i class="fa fa-user" aria-hidden="true"></i>Nombres</th>
+          <th scope="col"><i class="fa fa-envelope" aria-hidden="true"></i>Email</th>
+          <th scope="col"><i class="fa fa-trash" aria-hidden="true"></i>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody id="listarclave">
+
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

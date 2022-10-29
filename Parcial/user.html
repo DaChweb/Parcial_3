@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="java/java.js"></script>
+  <script src="https://kit.fontawesome.com/b375149b8e.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Registro</title>
+</head>
+
+<body onload="listar();">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b7eedd">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa fa-home"
+                aria-hidden="true"></i>Inicio</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container"><br>
+    <div>
+      <label for="name" class="form-label"><i class="fa fa-building-o" aria-hidden="true"></i> Categoría</label>
+      <select class="form-control" id="categoria" required>
+        <option selected="" disabled="">Categorías</option>
+        <option value="Individual">Individual</option>
+        <option value="Corporativo">Corporativo</option>        
+      </select> <br>
+
+    <div>
+      <label for="name" class="form-label"><i class="fa fa-user-o" aria-hidden="true"></i> Nombres</label>
+      <input type="text" class="form-control" id="name" placeholder="Primer nombre" required>
+    </div> <br>
+
+    <div>
+      <label for="lastname" class="form-label"><i class="fa fa-user-o" aria-hidden="true"></i> Apellidos</label>
+      <input type="text" class="form-control" id="lastname" placeholder="Primer apellido" required>
+    </div> <br>
+
+    <div>
+      <label for="email" class="form-label"><i class="fa fa-envelope-o" aria-hidden="true"></i> Correo
+        Electrónico</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+    </div> <br>
+
+    <div>
+      <label for="passwd" class="form-label"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Contraseña</label>
+      <input type="password" class="form-control" id="passwd" placeholder="*******" required>
+    </div> <br>
+
+    <div>
+      <input class="form-check-input" type="checkbox" id="info" required>
+      <label class="form-check-label" for="info"> <i class="fa fa-clone" aria-hidden="true"></i> Desea recibir
+        información</label> <br>
+
+      <input class="form-check-input" type="checkbox" id="terminos" required>
+      <label class="form-check-label" for="terminos"> <i class="fa fa-clone" aria-hidden="true"></i> Acepta los términos
+        de servicio</label>
+    </div> <br>
+
+    <button class="btn btn-primary" onclick="guadar_localStorage();listar();">Regístrate</button> <br> <br>
+
+    
+    <div class="alert alert-primary" role="alert">
+      Listado de registros
+    
+    <table class="table table-striped table-hover">
+        <thead>
+            <th scope="col"><i class="fa fa-building" aria-hidden="true"></i> Categorías</th>
+            <th scope="col"><i class="fa fa-user" aria-hidden="true"></i> Nombres</th>
+            <th scope="col"><i class="fa fa-user" aria-hidden="true"></i> Apellidos</th>
+            <th scope="col"><i class="fa fa-envelope" aria-hidden="true"></i> Email</th>
+            <th scope="col"><i class="fa fa-lock" aria-hidden="true"></i> Password</th>
+            <th scope="col"><i class="fa fa-check-square" aria-hidden="true"></i> Información</th>
+            <th scope="col"><i class="fa fa-check-square" aria-hidden="true"></i> Términos</th>
+            <th scope="col"><i class="fa fa-trash" aria-hidden="true"></i> Eliminar</th>
+        </thead>
+        <tbody id="listarclave">
+
+        </tbody>
+        </table>
+  </div>
+</body>
+
+</html>

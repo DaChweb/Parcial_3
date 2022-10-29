@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(45deg, rgba(0,140,127,1) 0%, rgba(0,245,255,1) 100%);
+}
+
+label {
+    color: #ffffff;
+}
+
+th {
+    color: #000000;
+}
+
+i {
+    margin-right: 5px;
+    color: #000000;
+}
+
+.card {
+    margin-right: 15px;
+    width: 300px;
+    height: 380px;
+}
+
+.imagen {
+    height: 500px;
+    width: 590px;
+    margin-left: -10px;
+    margin-top: -40px;
+}
+
+.picture {
+    height: 174px;  
+    width: 270px;
+    padding-top: 5px;
+}
+
+input {
+    background : #b46767;
+    border-radius : 7px;
+    width: 60px;
+    height: 30px;
+}
+
+select.nivel {
+    background : #ffffff;
+    border-radius : 7px;
+    width: 170px;
+    height: 30px;
+    margin: 3px 557px;
+}
